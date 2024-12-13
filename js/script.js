@@ -13,4 +13,14 @@ subTypeElement.addEventListener("change", function (e) {
 subDurationElement.addEventListener("change", function(e) {
     subDuration = Number(e.target.value);
     console.log(subDuration);
-})
+});
+
+updateSubscriptionDiv = function () {
+    var monthlyCost = 5;
+    if (subType === "standard") {
+        monthlyCost = 7;
+    } else if (subType === "premium") {
+        monthlyCost = 10;
+    }
+
+};
